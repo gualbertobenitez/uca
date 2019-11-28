@@ -1,0 +1,30 @@
+012 Semifinal del Campeonato Paraguayo Femenino 2019 
+022 Asuncion - Circolo Deportivo y Cultural Italo Paraguayo
+032 PAR
+042 2019/09/20
+052 2019/09/26
+062 14 (14)
+072 12
+092 Swiss System
+102 IA Benitez Fretes, Gualberto 3705498
+112 Gomez, Nestor  (PAR)  AN 3701093
+122 Standard: 60 minutos más 30 segundos de incremento desde la jugada 1
+132                                                                                        19/09/20  19/09/21  19/09/21  19/09/22  19/09/22  19/09/23  19/09/24  19/09/25  19/09/26
+
+         1         2         3         4         5         6         7         8         9        10        11        12        13        14        15        16        17        18
+123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+DDD SSSS sTTT NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN RRRR FFF IIIIIIIIIII BBBB/BB/BB PPPP RRRR  1111 1 1  2222 2 2  3333 3 3  4444 4 4  5555 5 5  6666 6 6  7777 7 7  8888 8 8  9999 9 9 
+001    1 fWFM Perez,Dalila                      1891 PAR     3702014 1997/00/00  7.5    1     8 w 0    12 b 1     6 w 1     7 b 1     5 b =     2 w 1     3 b 1     4 w 1    11 w 1  
+001    2 fWCM Avalos,Leticia                    1684 PAR     3702073 1993/00/00  6.0    4     9 b 1     5 w 0     3 b =    10 w 1     4 w 1     1 b 0     6 b =    13 w 1    12 w 1  
+001    3 f    Avalos,Rosana                     1559 PAR     3702090 1996/00/00  6.0    5    10 w 1     6 b =     2 w =     5 w 0     9 b 1     4 b 1     1 w 0    14 b 1    13 b 1  
+001    4 f    Montiel Caceres,Helen             1501 PAR     3707121 2006/00/00  5.0    6    11 b 1     7 w 1     5 b 0     9 w 1     2 b 0     3 w 0    14 b 1     1 b 0     6 w 1  
+001    5 f    Oviedo Acosta,Paula               1407 PAR     3704394 2005/00/00  7.5    2    12 w 1     2 b 1     4 w 1     3 b 1     1 w =     6 w 0     8 b 1    11 b 1     7 w 1  
+001    6 f    Perez Canete,Dora Romina          1388 PAR     3704890 2004/00/00  6.0    3    13 b 1     3 w =     1 b 0    11 w 1     7 w 1     5 b 1     2 w =     8 w 1     4 b 0  
+001    7 f    Duarte Laconich,Jazmin            1364 PAR     3708705 2006/00/00  4.0   10    14 w 1     4 b 0    10 w 1     1 w 0     6 b 0     8 b 0    13 w 1    12 b 1     5 b 0  
+001    8 f    Zorrilla Videla,Maria Valentina   1276 PAR     3708918 2007/00/00  5.0    7     1 b 1     9 w 0    11 b 0    13 w 1    14 b 1     7 w 1     5 w 0     6 b 0    10 b 1  
+001    9 f    Allo Collante,Violeta             1197 PAR     3705013 2006/00/00  4.5    8     2 w 0     8 b 1    12 w 1     4 b 0     3 w 0    13 b 1    11 b 0    10 w =    14 w 1  
+001   10 f    Mayeregger Gonzalez,Fiorella      1131 PAR     3708845 2009/00/00  3.5   11     3 b 0    13 w 1     7 b 0     2 b 0  0000 - Z    14 w 1    12 w 1     9 b =     8 w 0  
+001   11 f    Mayeregger Gonzalez,Renata        1070 PAR     3708900 2007/00/00  4.0    9     4 w 0    14 b 1     8 w 1     6 b 0  0000 - Z    12 b 1     9 w 1     5 w 0     1 b 0  
+001   12 f    Valdez Oliva,Sofia Guadalupe      1017 PAR     3710696 2003/00/00  2.0   12     5 b 0     1 w 0     9 b 0    14 w 1    13 b 1    11 w 0    10 b 0     7 w 0     2 b 0  
+001   13 f    Kovacs Gonzalez,Naomi             0000 PAR     3708837 2010/00/00  1.0   13     6 w 0    10 b 0    14 w 1     8 b 0    12 w 0     9 w 0     7 b 0     2 b 0     3 w 0  
+001   14 f    Lugo Martinez,Jimena Sofia        0000 PAR     3710793 2012/00/00  0.0   14     7 b 0    11 w 0    13 b 0    12 b 0     8 w 0    10 b 0     4 w 0     3 w 0     9 b 0  

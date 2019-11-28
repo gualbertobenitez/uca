@@ -1,0 +1,26 @@
+012 Torneo de Campeones Paraguay 2019 
+022 Club Internacional de Tenis
+032 PAR
+042 2019/10/03
+052 2019/10/10
+062 10 (10)
+072 10
+092 Individual round robin
+102 IA Benitez Fretes, Gualberto 3705498
+112 AN Gomez, Nestor 3701093
+122 90 min + 30 seg desde la primera movida
+132                                                                                        19/10/03  19/10/04  19/10/05  19/10/06  19/10/06  19/10/07  19/10/08  19/10/09  19/10/10
+
+         1         2         3         4         5         6         7         8         9        10        11        12        13        14        15        16        17        18
+123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+DDD SSSS sTTT NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN RRRR FFF IIIIIIIIIII BBBB/BB/BB PPPP RRRR  1111 1 1  2222 2 2  3333 3 3  4444 4 4  5555 5 5  6666 6 6  7777 7 7  8888 8 8  9999 9 9 
+001    1 m    Pereira,Sergio                    2069 PAR     3701530 1991/00/00  5.0    5    10 w 1     2 w 1     3 b 1     4 w 0     5 b 0     6 w 1     7 b 0     8 w 1     9 b 0  
+001    2 m    Barrientos,Ernesto                1924 PAR     3701247 1991/00/00  3.0    9     9 w 0     1 b 0    10 w =     3 w 0     4 b 0     5 w 0     6 b =     7 w 1     8 b 1  
+001    3 m    Perez,Hernan                      2135 PAR     3701360 1993/00/00  3.0    8     8 w 0     9 b 0     1 w 0     2 b 1    10 w 1     4 w =     5 b 0     6 w 0     7 b =  
+001    4 m    Diaz,Fernando                     2095 PAR     3701255 1992/00/00  6.5    2     7 w 1     8 b =     9 w 1     1 b 1     2 w 1     3 b =    10 w 1     5 w 0     6 b =  
+001    5 m    Mayeregger,Arnold                 2061 PAR     3705226 2002/00/00  7.0    1     6 w 0     7 b 1     8 w 0     9 b 1     1 w 1     2 b 1     3 w 1     4 b 1    10 w 1  
+001    6 m    Alarcon,Jose                      2106 PAR     3700836 1992/00/00  3.0    7     5 b 1    10 b 0     7 w 0     8 b 0     9 w 0     1 b 0     2 w =     3 b 1     4 w =  
+001    7 m    Cantero,Rodolfo                   2124 PAR     3703762 1999/00/00  5.5    4     4 b 0     5 w 0     6 b 1    10 b 1     8 w 1     9 b 1     1 w 1     2 b 0     3 w =  
+001    8 mCM  Melian,Juan Sebastian             1847 PAR     3706575 2006/00/00  4.5    6     3 b 1     4 w =     5 b 1     6 w 1     7 b 0    10 b 1     9 w 0     1 b 0     2 w 0  
+001    9 mFM  Benitez Galeano,Alejandro         2187 PAR     3703568 2002/00/00  6.0    3     2 b 1     3 w 1     4 b 0     5 w 0     6 b 1     7 w 0     8 b 1    10 b 1     1 w 1  
+001   10 m    Benitez,Raul Ivan                 1837 PAR     3707270 2000/00/00  1.5   10     1 b 0     6 w 1     2 b =     7 w 0     3 b 0     8 w 0     4 b 0     9 w 0     5 b 0  
