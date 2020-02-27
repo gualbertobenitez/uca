@@ -1,0 +1,102 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel='stylesheet' href='http://mottie.github.com/tablesorter/css/theme.blue.css'>
+        <link rel='stylesheet' href='http://mottie.github.com/tablesorter/addons/pager/jquery.tablesorter.pager.css'>
+        <script src='js/libs/underscore.js/underscore-min.js'></script>
+        <script src='js/libs/jquery/jquery.min.js'></script>
+        <script src='js/libs/backbone.js/backbone-min.js'></script>
+        <script src='http://mottie.github.com/tablesorter/js/jquery.tablesorter.min.js'></script>
+        <script src='http://mottie.github.com/tablesorter/addons/pager/jquery.tablesorter.pager.js'></script>
+        <script src='RestClientJSProyecto.js'></script>
+    </head>
+    <body>
+        <div id='create'></div>
+
+        <table id='datatable' class='tablesorter-blue'>
+        </table>
+        <div class='pager' id='pager'>
+            <img src='http://mottie.github.com/tablesorter/addons/pager/icons/first.png' class='first' alt='First'/>
+            <img src='http://mottie.github.com/tablesorter/addons/pager/icons/prev.png' class='prev' alt='Prev'/>
+            <span class='pagedisplay'></span> <!-- this can be any element, including an input -->
+            <img src='http://mottie.github.com/tablesorter/addons/pager/icons/next.png' class='next' alt='Next'/>
+            <img src='http://mottie.github.com/tablesorter/addons/pager/icons/last.png' class='last' alt='Last'/>
+            <select class='pagesize'>
+                <option selected='selected' value='10'>10</option>
+                <option value='20'>20</option>
+                <option value='30'>30</option>
+                <option value='40'>40</option>
+            </select>
+        </div>
+        <br>
+
+        <div id='details'></div>
+
+
+        <!-- Templates -->
+        <script type='text/template' id='tpl-create'>
+            <!--
+            Put your controls to create new entity here.
+
+            Class 'new' is used to listen on events in JS code.
+            -->
+            <button class='new'>Create</button>
+        </script>
+
+        <script type='text/template' id='thead'>
+            <thead>
+            <tr>
+            <th>proyectoId</th>
+            <th>estado</th>
+            <th>nombre</th>
+            <th>comentarios</th>
+            <th>progreso</th>
+            </tr>
+            </thead>
+        </script>
+        <script type='text/template' id='tpl-proyecto-list-item'>
+            <td><a href='#<%= proyectoId %>'><%= proyectoId %></a></td>
+            <td><%= estado %></td>
+            <td><%= nombre %></td>
+            <td><%= comentarios %></td>
+            <td><%= progreso %></td>
+        </script>
+
+        <script type='text/template' id='tpl-proyecto-details'>
+            <div>
+            <table>
+            <tbody>
+            <tr><td>Id</td>
+            <td>
+            <input type='text' id='proyectoId' name='id' value='<%= typeof(proyectoId)!== "undefined" ? proyectoId : "" %>'  />
+            </td>
+            </tr>
+            <tr>
+            <td>estado</td><td><input type='text' id='estado' name='estado' value='<%= estado %>'/></td></tr>
+            <tr>
+            <td>nombre</td><td><input type='text' id='nombre' name='nombre' value='<%= nombre %>'/></td></tr>
+            <tr>
+            <td>comentarios</td><td><input type='text' id='comentarios' name='comentarios' value='<%= comentarios %>'/></td></tr>
+            <tr>
+            <td>progreso</td><td><input type='text' id='progreso' name='progreso' value='<%= progreso %>'/></td></tr>
+            </tbody>
+            </table>
+            <!--
+            Put your controls to create new entity here.
+            Classes 'save' and 'delete' are used to listen on events in JS code.
+            -->
+            <button  class='save'>Save</button>
+            <button  class='delete'>Delete</button>
+            </div>
+        </script>
+
+
+    </body>
+</html>
