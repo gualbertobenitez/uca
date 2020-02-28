@@ -47,17 +47,25 @@ SET row_security = off;
 -- Name: actualizar_estado_actividad(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION public.actualizar_estado_actividad() RETURNS trigger
-    LANGUAGE plpgsql
-    AS $$
+CREATE or REPLACE FUNCTION public.actualizar_estado_actividad()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF 
+AS $BODY$
   DECLARE
   v_actividad integer;
   v_progreso integer;
   BEGIN
-
-	select actividad_id into v_actividad FROM public.tarea
-	where tarea_id=NEW.tarea_id;
 	
+	IF (TG_OP = 'INSERT' OR TG_OP = 'UPDATE' ) THEN
+		select actividad_id into v_actividad FROM public.tarea
+		where tarea_id=NEW.tarea_id;
+	ELSEIF (TG_OP = 'DELETE') THEN
+		select actividad_id into v_actividad FROM public.tarea
+		where tarea_id=OLD.tarea_id;
+	  END IF;
+	  
 	SELECT round(sum(CASE WHEN estado='A' THEN 0 WHEN 
 estado='F' THEN 100 ELSE 0 END)/count(estado),0) into v_progreso
 	FROM public.tarea where actividad_id=v_actividad;
@@ -73,10 +81,11 @@ estado='F' THEN 100 ELSE 0 END)/count(estado),0) into v_progreso
     END IF;
 		
   END;
-$$;
+$BODY$;
 
+ALTER FUNCTION public.actualizar_estado_actividad()
+    OWNER TO postgres;
 
-ALTER FUNCTION public.actualizar_estado_actividad() OWNER TO postgres;
 
 --
 -- TOC entry 204 (class 1255 OID 16502)

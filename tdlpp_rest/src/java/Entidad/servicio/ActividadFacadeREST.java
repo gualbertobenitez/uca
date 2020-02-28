@@ -48,8 +48,9 @@ public class ActividadFacadeREST extends AbstractFacade<Actividad> {
     @PUT
     @Path("{id}")
     @Consumes({"application/json"})
-    public void edit(@PathParam("id") Integer id, Actividad entity) {
-        super.edit(entity);
+    @Produces({"application/json"})
+    public Actividad edit(@PathParam("id") Integer id, Actividad entity) {
+        return super.editR(entity);
     }
 
     @DELETE

@@ -58,11 +58,12 @@ public class PersonaFacadeREST extends AbstractFacade<Persona> {
     }
     
     
-    @PUT
+   @PUT
     @Path("{id}")
     @Consumes({"application/json"})
-    public void edit(@PathParam("id") Integer id, Persona entity) {
-        super.edit(entity);
+    @Produces({"application/json"})
+    public Persona edit(@PathParam("id") Integer id, Persona entity) {
+        return super.editR(entity);
     }
 
     @DELETE

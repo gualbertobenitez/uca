@@ -59,8 +59,9 @@ public class ProyectoFacadeREST extends AbstractFacade<Proyecto> {
     @PUT
     @Path("{id}")
     @Consumes({"application/json"})
-    public void edit(@PathParam("id") Integer id, Proyecto entity) {
-        super.edit(entity);
+    @Produces({"application/json"})
+    public Proyecto edit(@PathParam("id") Integer id, Proyecto entity) {
+        return super.editR(entity);
     }
 
     @DELETE

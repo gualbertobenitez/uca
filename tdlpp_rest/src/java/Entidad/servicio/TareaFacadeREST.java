@@ -46,8 +46,9 @@ public class TareaFacadeREST extends AbstractFacade<Tarea> {
     @PUT
     @Path("{id}")
     @Consumes({"application/json"})
-    public void edit(@PathParam("id") Integer id, Tarea entity) {
-        super.edit(entity);
+    @Produces({"application/json"})
+    public Tarea edit(@PathParam("id") Integer id, Tarea entity) {
+        return super.editR(entity);
     }
 
     @DELETE
