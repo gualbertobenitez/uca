@@ -1,0 +1,626 @@
+{
+	"id": "752d0a4f-3bdc-495f-9f2a-364547ed1ceb",
+	"name": "Tdlpp",
+	"timestamp": "2020-02-28T02:13:21.979Z",
+	"collection_id": "73673f03-2666-4a82-a08c-e43576d8f084",
+	"folder_id": 0,
+	"environment_id": "404cb35d-f809-4fa8-be6c-2fd8efba83d8",
+	"totalPass": 39,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "0ba12314-8f57-408f-9f98-39ce23c78ff0",
+			"name": "Proyectos GET",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/proyecto",
+			"time": 790,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				790
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "201409db-5d73-4106-a4f5-3d6bfbd4c4f4",
+			"name": "Nuevo Proyecto",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/proyecto",
+			"time": 464,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				464
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "02eae364-01c0-48fb-afa9-40b838f53f54",
+			"name": "Proyectos GET con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/proyecto/52",
+			"time": 401,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				401
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "e85a1fd7-6b7d-462e-8fdc-ec370bbffaf7",
+			"name": "Proyecto Update con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/proyecto/52",
+			"time": 416,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				416
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "0e5f8bb0-6316-4b22-baba-0b88b8aa3415",
+			"name": "Proyecto Borrado con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/proyecto/52",
+			"time": 411,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				411
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "05810090-d18c-48af-97f6-751ae52d1a76",
+			"name": "Actividades GET",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/actividad",
+			"time": 418,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				418
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "3757cd24-0c03-4de2-9f09-17763fd9059a",
+			"name": "Nueva Actividad",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/actividad",
+			"time": 442,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				442
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "33f674f5-ce8b-447a-bec1-cdd2c15e2ccd",
+			"name": "Actividad GET con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/actividad/34",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "3efb1e8a-097f-4cdd-bec4-1a32f005f392",
+			"name": "Actividad Update con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/actividad/34",
+			"time": 413,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				413
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "413d4c01-aacf-42d4-ad1e-db11919f503b",
+			"name": "Actividad Borrado con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/actividad/34",
+			"time": 421,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				421
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "96482b55-6d44-4107-ac3c-83d4ccf85691",
+			"name": "Tareas GET",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/tarea",
+			"time": 414,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				414
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "0a778231-1d5e-459d-bb02-729570bf8c82",
+			"name": "Nueva Tarea",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/tarea",
+			"time": 417,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				417
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "771c8166-7aeb-43d4-8e3e-7ed0013914cc",
+			"name": "Tarea GET con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/tarea/17",
+			"time": 400,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				400
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "101b6e1d-dee5-44de-a801-11fc8fdf0a0d",
+			"name": "Tarea Update con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/tarea/17",
+			"time": 397,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Response time is less than 200ms": true,
+				"Payload must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Payload must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				397
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Response time is less than 200ms": true,
+					"Payload must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "fe1ed9b5-fd65-4a45-b080-c6c642375ae6",
+			"name": "Tarea Borrado con Id",
+			"url": "http://ffb9f835.ngrok.io/tdlpp_rest/api/tarea/17",
+			"time": 404,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				404
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"collection": {
+		"requests": [
+			{
+				"id": "0ba12314-8f57-408f-9f98-39ce23c78ff0",
+				"method": "GET"
+			},
+			{
+				"id": "201409db-5d73-4106-a4f5-3d6bfbd4c4f4",
+				"method": "POST"
+			},
+			{
+				"id": "02eae364-01c0-48fb-afa9-40b838f53f54",
+				"method": "GET"
+			},
+			{
+				"id": "e85a1fd7-6b7d-462e-8fdc-ec370bbffaf7",
+				"method": "PUT"
+			},
+			{
+				"id": "0e5f8bb0-6316-4b22-baba-0b88b8aa3415",
+				"method": "DELETE"
+			},
+			{
+				"id": "05810090-d18c-48af-97f6-751ae52d1a76",
+				"method": "GET"
+			},
+			{
+				"id": "3757cd24-0c03-4de2-9f09-17763fd9059a",
+				"method": "POST"
+			},
+			{
+				"id": "33f674f5-ce8b-447a-bec1-cdd2c15e2ccd",
+				"method": "GET"
+			},
+			{
+				"id": "3efb1e8a-097f-4cdd-bec4-1a32f005f392",
+				"method": "PUT"
+			},
+			{
+				"id": "413d4c01-aacf-42d4-ad1e-db11919f503b",
+				"method": "DELETE"
+			},
+			{
+				"id": "96482b55-6d44-4107-ac3c-83d4ccf85691",
+				"method": "GET"
+			},
+			{
+				"id": "0a778231-1d5e-459d-bb02-729570bf8c82",
+				"method": "POST"
+			},
+			{
+				"id": "771c8166-7aeb-43d4-8e3e-7ed0013914cc",
+				"method": "GET"
+			},
+			{
+				"id": "101b6e1d-dee5-44de-a801-11fc8fdf0a0d",
+				"method": "PUT"
+			},
+			{
+				"id": "fe1ed9b5-fd65-4a45-b080-c6c642375ae6",
+				"method": "DELETE"
+			}
+		]
+	}
+}

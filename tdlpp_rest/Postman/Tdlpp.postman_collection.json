@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "73673f03-2666-4a82-a08c-e43576d8f084",
+		"name": "Tdlpp",
+		"description": "Coleccion para Test de las APIs de Tdlpp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Proyectos GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/proyecto",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"proyecto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nuevo Proyecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"var data=JSON.parse(responseBody);\r",
+							"pm.environment.set(\"idProyecto\", data.proyectoId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentarios\": \"Nuevo Proyecto\",\r\n    \"duenoId\": {\r\n        \"personaId\": 3\r\n    },\r\n    \"estado\": \"A\",\r\n    \"fechaFin\": \"2020-06-08T00:00:00-04:00\",\r\n    \"fechaInicio\": \"2020-04-18T00:00:00-03:00\",\r\n    \"fechaLimite\": \"2020-06-28T00:00:00-03:00\",\r\n    \"nombre\": \"Proyecto de Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/proyecto",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"proyecto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proyectos GET con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/proyecto/{{idProyecto}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"proyecto",
+						"{{idProyecto}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proyecto Update con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentarios\": \"Nuevo Proyecto Actualizado 3\",\r\n    \"duenoId\": {\r\n        \"personaId\": 3\r\n    },\r\n    \"estado\": \"A\",\r\n    \"fechaFin\": \"2020-06-08T00:00:00-04:00\",\r\n    \"fechaInicio\": \"2020-04-18T00:00:00-03:00\",\r\n    \"fechaLimite\": \"2020-06-28T00:00:00-03:00\",\r\n    \"nombre\": \"Proyecto de Prueba\",\r\n    \"proyectoId\": {{idProyecto}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/proyecto/{{idProyecto}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"proyecto",
+						"{{idProyecto}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proyecto Borrado con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"/*pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"*/\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"/*\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/proyecto/{{idProyecto}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"proyecto",
+						"{{idProyecto}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividades GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/actividad",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"actividad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nueva Actividad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "95e78d0a-9a0e-4fb3-86d7-d4cdec5482df",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"var dataA=JSON.parse(responseBody);\r",
+							"pm.environment.set(\"idActividad\", dataA.actividadId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Nueva Actividad\",\r\n        \"proyectoId\": {\r\n            \"proyectoId\": 2\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/actividad",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"actividad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividad GET con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/actividad/{{idActividad}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"actividad",
+						"{{idActividad}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividad Update con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"actividadId\": {{idActividad}},\r\n        \"nombre\": \"Nueva Actividad Actualizada!\",\r\n        \"progreso\": 0,\r\n        \"proyectoId\": {\r\n            \"duenoId\": {\r\n                \"email\": \"jj@dutch.com\",\r\n                \"nombre\": \"JJ\",\r\n                \"personaId\": 4,\r\n                \"rol\": \"U\"\r\n            },\r\n            \"estado\": \"A\",\r\n            \"fechaFin\": \"2020-04-08T00:00:00-04:00\",\r\n            \"fechaInicio\": \"2020-02-18T00:00:00-03:00\",\r\n            \"fechaLimite\": \"2020-02-28T00:00:00-03:00\",\r\n            \"nombre\": \"Ejercicios\",\r\n            \"progreso\": 0,\r\n            \"proyectoId\": 2\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/actividad/{{idActividad}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"actividad",
+						"{{idActividad}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividad Borrado con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"/*pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"*/\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"/*\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/actividad/{{idActividad}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"actividad",
+						"{{idActividad}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tareas GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/tarea",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"tarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nueva Tarea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "95e78d0a-9a0e-4fb3-86d7-d4cdec5482df",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"var dataB=JSON.parse(responseBody);\r",
+							"pm.environment.set(\"idTarea\", dataB.tareaId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"actividadId\": {\r\n\"actividadId\": 1\r\n},\r\n\"estado\": \"A\",\r\n\"nombre\": \"Nueva Tarea\",\r\n\"responsableId\": {\r\n\"personaId\": 1}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/tarea",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"tarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarea GET con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/tarea/{{idTarea}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"tarea",
+						"{{idTarea}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarea Update con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"actividadId\": {\r\n\"actividadId\": 1\r\n},\r\n\"estado\": \"A\",\r\n\"nombre\": \"Nueva Tarea Actualizada\",\r\n\"responsableId\": {\r\n\"personaId\": 1},\r\n\"tareaId\": {{idTarea}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/tarea/{{idTarea}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"tarea",
+						"{{idTarea}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarea Borrado con Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3057de41-cb48-467d-8149-f250b9fa477e",
+						"exec": [
+							"/*pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"*/\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"/*\r",
+							"pm.test(\"Payload must be valid and have a body\", function () { \r",
+							"     pm.response.to.be.ok; // equivalente a decir que valide que sea 200\r",
+							"     pm.response.to.be.withBody; // body tiene que exitir\r",
+							"     pm.response.to.be.json; // además que sea un JSON válido\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/{{resource}}/tarea/{{idTarea}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{resource}}",
+						"tarea",
+						"{{idTarea}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

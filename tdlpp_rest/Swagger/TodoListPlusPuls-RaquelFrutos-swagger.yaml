@@ -1,0 +1,550 @@
+---
+swagger: "2.0"
+info:
+  description: REST API-Proyectos de un Departamento, donde jefes asignan proyectos a empleados que realizan actividades que tienen tareas
+  version: 1.0.0
+  title: REST API - Proyectos - Grupo Mortero Bala
+  contact:
+    email: user@example.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: virtserver.swaggerhub.com
+
+tags:
+- name: Persona
+  description: Persona (creación, modificación eliminación de registros de personas)
+- name: Proyecto
+  description: Gestión (creación, modificación eliminación de registros de proyectos)
+- name: Actividad
+  description: Actividad (creación, modificación eliminación de registros de actividad)
+- name: Tarea
+  description: Tarea (creación, modificación eliminación de registros de tareas)
+
+schemes:
+- https
+- http
+
+paths:
+  /persona:
+    post:
+      tags:
+      - Persona
+      summary: Crea un nuevo registro de persona
+      description: Crea nuevas personas
+      operationId: crearPersona
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: persona
+        description: Representacion del recurso personas
+        required: false
+        schema:
+          $ref: '#/definitions/Persona'
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Persona'
+        "400":
+          description: Invalid input
+  /persona/{id}:
+    get:
+      tags:
+      - Lectura
+      summary: Obtiene información de una persona
+      description: Esta interfaz permite obtener información sobre una persona, dado el ID de la persona.
+      operationId: getPersona
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la persona
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Persona'
+        "400":
+          description: Invalid parameter
+    put:
+      tags:
+      - Persona
+      summary: Crea/Actualiza una persona
+      description: Crea/actualiza el registro de una persona
+      operationId: crearActualizarPersona
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la persona
+        required: true
+        type: integer
+      - in: body
+        name: persona
+        description: Representacion del recurso persona
+        required: false
+        schema:
+          $ref: '#/definitions/Persona'
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/Persona'
+        "400":
+          description: Input no valido
+    delete:
+      tags:
+      - Persona
+      summary: Elimina el registro de una persona
+      description: Esta interfaz permite la eliminación del registro de una persona, dado el ID de la persona.
+      operationId: eliminarPersona
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la persona
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Persona'
+        "400":
+          description: Invalid parameter
+
+  /proyecto:
+    post:
+      tags:
+      - Proyecto
+      summary: Crea un nuevo registro de proyecto
+      description: Crea nuevos proyectos
+      operationId: crearProyecto
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: proyecto
+        description: Representacion del recurso proyecto
+        required: false
+        schema:
+          $ref: '#/definitions/Proyecto'
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Proyecto'
+        "400":
+          description: Invalid input
+  /proyecto/{id}:
+    get:
+      tags:
+      - Lectura
+      summary: Obtiene información de un proyecto
+      description: Esta interfaz permite obtener información sobre un proyecto, dado el ID del proyecto.
+      operationId: getProyecto
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador del proyecto
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Proyecto'
+        "400":
+          description: Invalid parameter
+    put:
+      tags:
+      - Proyecto
+      summary: Crea/Actualiza un proyecto
+      description: Crea/actualiza el registro de un proyecto
+      operationId: crearActualizarProyecto
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador del proyecto
+        required: true
+        type: integer
+      - in: body
+        name: proyecto
+        description: Representacion del recurso proyecto
+        required: false
+        schema:
+          $ref: '#/definitions/Proyecto'
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/Proyecto'
+        "400":
+          description: Input no valido
+    delete:
+      tags:
+      - Proyecto
+      summary: Elimina el registro de un proyecto
+      description: Esta interfaz permite la eliminación del registro de un proyecto, dado el ID del proyecto.
+      operationId: eliminarProyecto
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador del proyecto
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Proyecto'
+        "400":
+          description: Invalid parameter
+
+  /actividad:
+    post:
+      tags:
+      - Actividad
+      summary: Crea un nuevo registro de actividades
+      description: Crea nuevas actividades
+      operationId: crearActividad
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: actividad
+        description: Representacion del recurso actividad
+        required: false
+        schema:
+          $ref: '#/definitions/Actividad'
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Actividad'
+        "400":
+          description: Invalid input
+  /actividad/{id}:
+    get:
+      tags:
+      - Lectura
+      summary: Obtiene información de una actividad
+      description: Esta interfaz permite obtener información sobre una actividad, dado el ID de la actividad.
+      operationId: getActividad
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la actividad
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Actividad'
+        "400":
+          description: Invalid parameter
+    put:
+      tags:
+      - Actividad
+      summary: Crea/Actualiza una actividad
+      description: Crea/actualiza el registro de una actividad
+      operationId: crearActualizarActividad
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la actividad
+        required: true
+        type: integer
+      - in: body
+        name: actividad
+        description: Representacion del recurso actividad
+        required: false
+        schema:
+          $ref: '#/definitions/Actividad'
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/Actividad'
+        "400":
+          description: Input no valido
+    delete:
+      tags:
+      - Actividad
+      summary: Elimina el registro de una actividad
+      description: Esta interfaz permite la eliminación del registro de una actividad, dado el ID de la actividad.
+      operationId: eliminarActividad
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la actividad
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Actividad'
+        "400":
+          description: Invalid parameter
+
+  /tarea:
+    post:
+      tags:
+      - Tarea
+      summary: Crea un nuevo registro de tarea
+      description: Crea nuevas tareas
+      operationId: crearTarea
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: tarea
+        description: Representacion del recurso tarea
+        required: false
+        schema:
+          $ref: '#/definitions/Tarea'
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Tarea'
+        "400":
+          description: Invalid input
+  /tarea/{id}:
+    get:
+      tags:
+      - Lectura
+      summary: Obtiene información de una tarea
+      description: Esta interfaz permite obtener información sobre una tarea, dado el ID de la tarea.
+      operationId: getTarea
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la tarea
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Tarea'
+        "400":
+          description: Invalid parameter
+    put:
+      tags:
+      - Tarea
+      summary: Crea/Actualiza una tarea
+      description: Crea/actualiza el registro de una tarea
+      operationId: crearActualizarTarea
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la tarea
+        required: true
+        type: integer
+      - in: body
+        name: tarea
+        description: Representacion del recurso tarea
+        required: false
+        schema:
+          $ref: '#/definitions/Tarea'
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/Tarea'
+        "400":
+          description: Input no valido
+    delete:
+      tags:
+      - Tarea
+      summary: Elimina el registro de una tarea
+      description: Esta interfaz permite la eliminación del registro de una tarea, dado el ID de la tarea.
+      operationId: eliminarTarea
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Identificador de la tarea
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Tarea'
+        "400":
+          description: Invalid parameter
+
+definitions:
+  Persona:
+    type: object
+    required:
+    - id
+    - nombre
+    - email
+    properties:
+      id:
+        type: integer
+        example: 1
+      nombre:
+        type: string
+        example: Jose Luis Zarza
+      email:
+        type: string
+        example: jose.zarza@gmail.com 
+  Proyecto:
+    type: object
+    required:
+    - id
+    - nombre
+    - fechainicio
+    - fechalimite
+    - fechafin
+    - progreso
+    - estado
+    - comentarios
+    properties:
+      id:
+        type: integer
+        example: 1
+      nombre:
+        type: string
+        example: Asado
+      fechainicio:
+        type: string
+        example: 2020-02-26
+      fechalimite:
+        type: string
+        example: 2020-02-28 
+      fechafin:
+        type: string
+        example: 2020-02-29  
+      progreso:
+        type: integer
+        example: 0
+      estado:
+        type: string
+        example: Activo
+      comentarios:
+        type: string
+        example: Cena de fin de mes
+  Actividad:
+    type: object
+    required:
+    - id
+    - nombre
+    - fechaprogramada
+    - fechainicio
+    - fechalimite
+    - fechafin
+    - progreso
+    - comentarios
+    properties:
+      id:
+        type: integer
+        example: 1
+      nombre:
+        type: string
+        example: Comprar carne
+      fechaprogramada:
+        type: string
+        example: 2020-02-26
+      fechainicio:
+        type: string
+        example: 2020-02-26
+      fechalimite:
+        type: string
+        example: 2020-02-28 
+      fechafin:
+        type: string
+        example: 2020-02-29  
+      progreso:
+        type: integer
+        example: 0
+      estado:
+        type: string
+        example: Activo
+      comentarios:
+        type: string
+        example: Jose comprara la carne
+  Tarea:
+    type: object
+    required:
+    - id
+    - nombre
+    - fechaprogramada
+    - fechainicio
+    - fechalimite
+    - fechafin
+    - comentarios
+    - estado
+    properties:
+      id:
+        type: integer
+        example: 1
+      nombre:
+        type: string
+        example: Ir al super Stock
+      fechaprogramada:
+        type: string
+        example: 2020-02-26
+      fechainicio:
+        type: string
+        example: 2020-02-26
+      fechalimite:
+        type: string
+        example: 2020-02-28 
+      fechafin:
+        type: string
+        example: 2020-02-29
+      comentarios:
+        type: string
+        example: La costilla esta a Gs. 26450 el kg.
+      estado:
+        type: string
+        example: Activo
+# Added by API Auto Mocking Plugin
+basePath: /raquelfrutosgithub/NotePadPlusPlus1/1.0.0
